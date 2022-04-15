@@ -1,0 +1,23 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+
+body {
+    margin-bottom: 60px;
+    background-image: url('https://github.com/jamunabalamurugan/ProjectSampleMVC/blob/master/Team5-Airlines/Rash_Airlines/Rash_Airlines/images/index.jpg?raw=true');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}

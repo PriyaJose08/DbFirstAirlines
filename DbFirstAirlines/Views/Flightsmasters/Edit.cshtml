@@ -1,0 +1,41 @@
+﻿@model DbFirstAirlines.Models.Flightsmaster
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Flightsmaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FlightregistrationId" />
+            <div class="form-group">
+                <label asp-for="Flightname" class="control-label"></label>
+                <input asp-for="Flightname" class="form-control" />
+                <span asp-validation-for="Flightname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Economyseats" class="control-label"></label>
+                <input asp-for="Economyseats" class="form-control" />
+                <span asp-validation-for="Economyseats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Businessseats" class="control-label"></label>
+                <input asp-for="Businessseats" class="form-control" />
+                <span asp-validation-for="Businessseats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

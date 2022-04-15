@@ -1,0 +1,84 @@
+﻿@model DbFirstAirlines.Models.Flight
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Flight</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="JourneyId" class="control-label"></label>
+                <input asp-for="JourneyId" class="form-control" />
+                <span asp-validation-for="JourneyId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flightregistrationid" class="control-label"></label>
+                <select asp-for="Flightregistrationid" class ="form-control" asp-items="ViewBag.Flightregistrationid"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="SourceArea" class="control-label"></label>
+                <input asp-for="SourceArea" class="form-control" />
+                <span asp-validation-for="SourceArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DestinationArea" class="control-label"></label>
+                <input asp-for="DestinationArea" class="form-control" />
+                <span asp-validation-for="DestinationArea" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateofJourney" class="control-label"></label>
+                <input asp-for="DateofJourney" class="form-control" />
+                <span asp-validation-for="DateofJourney" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Departuretime" class="control-label"></label>
+                <input asp-for="Departuretime" class="form-control" />
+                <span asp-validation-for="Departuretime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Arrivaltime" class="control-label"></label>
+                <input asp-for="Arrivaltime" class="form-control" />
+                <span asp-validation-for="Arrivaltime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Businessclassprice" class="control-label"></label>
+                <input asp-for="Businessclassprice" class="form-control" />
+                <span asp-validation-for="Businessclassprice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Economyclassprice" class="control-label"></label>
+                <input asp-for="Economyclassprice" class="form-control" />
+                <span asp-validation-for="Economyclassprice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Availableeconomyseats" class="control-label"></label>
+                <input asp-for="Availableeconomyseats" class="form-control" />
+                <span asp-validation-for="Availableeconomyseats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Availablebusinessseats" class="control-label"></label>
+                <input asp-for="Availablebusinessseats" class="form-control" />
+                <span asp-validation-for="Availablebusinessseats" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

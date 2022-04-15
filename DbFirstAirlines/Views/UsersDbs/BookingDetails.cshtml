@@ -1,0 +1,59 @@
+﻿@model DbFirstAirlines.Models.Booking
+
+@{
+    ViewData["Title"] = "BookingDetails";
+}
+
+
+<div>
+    <h4>Booking Details</h4>
+    <hr />
+    <form>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookingId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FlightRegistrationId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FlightRegistrationId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.JourneyId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.JourneyId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOfPassengers)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoOfPassengers)
+        </dd>
+    </dl>
+    </form>
+</div>
+<div>
+    <a asp-action="SeatSelection" asp-route-id="@Model?.BookingId" asp-route-id1="@Model?.FlightRegistrationId">Confirm</a> |
+    <a asp-action="Index">Back to Home</a>
+</div>
+
+
+
+<head>
+<style>
+
+ 
+
+body {
+    background-image:url('https://github.com/jamunabalamurugan/ProjectSampleMVC/blob/master/Team5-Airlines/Rash_Airlines/Rash_Airlines/images/login.png?raw=true');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+</style>
+</head>

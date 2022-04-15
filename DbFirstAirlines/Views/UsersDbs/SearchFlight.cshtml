@@ -1,0 +1,115 @@
+﻿@model IEnumerable<DbFirstAirlines.Models.Flight>
+
+
+@{
+
+ViewData["Title"] = "SearchFlight";
+}
+
+@if (Model != null)
+{
+<form>
+	<table class="table">
+	<thead>
+	<tr>
+	<th>
+		@Html.DisplayNameFor(model => model.JourneyId)
+	</th>
+	
+	<th>
+		@Html.DisplayNameFor(model => model.SourceArea)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.DestinationArea)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.DateofJourney)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Departuretime)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Arrivaltime)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Businessclassprice)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Economyclassprice)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Duration)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Availablebusinessseats)
+	</th>
+	<th>
+		@Html.DisplayNameFor(model => model.Availableeconomyseats)
+	</th>
+	<th></th>
+	</tr>
+	</thead>
+<tbody>
+@foreach (var item in Model)
+{
+<tr>
+<td>
+@Html.DisplayFor(modelItem => item.JourneyId)
+</td>
+
+<td>
+@Html.DisplayFor(modelItem => item.SourceArea)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.DestinationArea)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.DateofJourney)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Departuretime)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Arrivaltime)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Businessclassprice)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Economyclassprice)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Duration)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Availablebusinessseats)
+</td>
+<td>
+@Html.DisplayFor(modelItem => item.Availableeconomyseats)
+</td>
+<td>
+@*<span><button type="submit" action =""class="btn btn-lg btn-secondary btn-login text-uppercase fw-bold mb-2"><a class="nav-link text-dark" asp-area="" asp-controller="Users" asp-route-id = "@item.JourneyId" asp-action="BookTicket">Select</a></button></span>*@
+@*<input type="text" placeholder = "No Of Passengers" name = "passengers" id = "passengers" />*@
+<a class="nav-link text-dark" asp-area="" asp-controller = "UsersDbs" asp-action = "BookTicket" asp-route-id = "@item.JourneyId" asp-route-id1="@item.Flightregistrationid">Select</a>
+</td>
+</tr>
+}
+</tbody>
+</table>
+</form>
+}
+
+
+<head>
+<style>
+
+ 
+
+body {
+    background-image:url('https://github.com/jamunabalamurugan/ProjectSampleMVC/blob/master/Team5-Airlines/Rash_Airlines/Rash_Airlines/images/fly1.jpg?raw=true');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+</style>
+</head>

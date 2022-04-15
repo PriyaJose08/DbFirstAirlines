@@ -1,0 +1,47 @@
+﻿@model IEnumerable<DbFirstAirlines.Models.Flightsmaster>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Flightname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Economyseats)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Businessseats)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Flightname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Economyseats)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Businessseats)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.FlightregistrationId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.FlightregistrationId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.FlightregistrationId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

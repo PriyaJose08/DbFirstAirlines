@@ -1,0 +1,43 @@
+﻿@model DbFirstAirlines.Models.Ticket
+
+<h4>Ticket</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Ticket">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input type="text" name="FirstName" id="FirstName" value="@ViewBag.FirstName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                
+                <input type="text" name="LastName" id="LastName" value="@ViewBag.LastName" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SeatId" class="control-label"></label>
+                
+                 <input type="number" name="SeatId" id="SeatId" value="@ViewBag.SeatId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="BookingId" class="control-label"></label>
+              
+                <input type="number" name="BookingId" id="BookingId" value="@ViewBag.BookingId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="PassengerId" class="control-label"></label>
+               
+                 <input type="number" name="PassengerId" id="PassengerId" value="@ViewBag.PassengerId" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

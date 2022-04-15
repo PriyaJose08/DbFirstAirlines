@@ -1,0 +1,50 @@
+﻿@model DbFirstAirlines.Models.Passenger
+
+<div>
+    <h4>Passenger Details</h4>
+    <hr />
+    <form>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PassengerId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PassengerId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ClassType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ClassType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BookingId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BookingId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeatId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeatId)
+        </dd>
+    </dl>
+    </form>
+</div>
+<div>
+    <a asp-action="Ticket" asp-route-id="@Model?.PassengerId" asp-route-id1="@Model?.BookingId" asp-route-id2="@Model?.SeatId" asp-route-id3="@Model?.FirstName" asp-route-id4="@Model?.LastName">Confirm</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

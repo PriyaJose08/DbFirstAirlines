@@ -1,0 +1,46 @@
+﻿@model DbFirstAirlines.Models.Passenger
+
+
+<h4>Passenger</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Passengers">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="BookingId" class="control-label"></label>
+                <input type="number" name="BookingId" id="BookingId" value="@ViewBag.BookingId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="SeatId" class="control-label"></label>
+                 <input type="number" name="SeatId" id="SeatId" value="@ViewBag.SeatId" />
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+
+            
+            <div class="form-group">
+                <label asp-for="ClassType" class="control-label"></label>
+                <input asp-for="ClassType" class="form-control" />
+                <span asp-validation-for="ClassType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" asp-items="@ViewBag.BookingId" asp-items1="@ViewBag.SeatId"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
